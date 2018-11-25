@@ -1,29 +1,18 @@
-# Firstview Developers Test
-This is a test that will help us review the quality of work for developers. This test is for developers ranging from Juniors - Seniors.
+Installation Instruction
+Makes a bare clone of the external repository in a local directory
 
-# Process
-- Submit your CV to jobs@hellofirstview.com (Ignore this step if a recruiter has already contacted us).
-- Fork this repository to your own account.
-- Develop your application on your own.
-- Submit your name, and URL to your repository for checking.
+git clone https://github.com/waseemd/developers-test
+cd developers-test
+Secondly do an installation using composer
 
-# Task
-Develop a Laravel application with user login (No registration). This application will be used to manage companies and their assets. You will need to include the following views.
-- Companies list table (With Pagination)
-- Single Company View. (Can double as the edit form).
-- New Company form.
+composer install
+After all dependencies are completely downloaded, copy .env.example to .env and generate key for the application
 
-A company must consist of the following info:
-  Name (required), email, logo (minimum 100×100), website as well as their asset list.
-  
-An Asset must consist of the following info:
-  Description, model, rand value
-  
-# Assessment Points
-You will be assesed on the approach, quality, scalability, efficiency and security of your product. The usage of modern practices will be benificial. You are free to make use of any frontend frameworks/tools you see fit. You will not be assessed on the HTML/CSS portions of your product, however making use of something like Bulma/Bootstrap would be great.
+cp .env.example .env
+php artisan key:generate
+Dont forget to setting up an local database config inside .env. Then do a migration.
 
-# Optional Extra tasks
-- Email notification: send email whenever new company is entered (use Mailgun or Mailtrap).
-- Basic testing with PHPUnit
-- Database seeding.
+php artisan migrate --seed
+Above command will do a migrating and seeding comand. Now serve the app and run locally.
 
+php artisan serve
