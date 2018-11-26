@@ -1,6 +1,6 @@
 Installation Instruction
 
-Makes a bare clone of the external repository in a local directory
+Make a clone of the external repository in a local directory
 
 git clone https://github.com/waseemd/developers-test
 
@@ -15,13 +15,12 @@ cp .env.example .env
 
 php artisan key:generate
 
-Dont forget to setting up an local database config inside .env. Then do a migration.
-
+Dont forget to set up a local database config inside .env. Then do a migration.
 
 php artisan migrate --seed
 
 Above command will do a migrating and seeding comand. Now serve the app and run locally.
 
-Run php artisan storage:link
+Run php artisan storage:link to create storage folder for images
 
-php artisan serve
+Run php artisan serve and go to url
