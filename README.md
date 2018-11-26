@@ -1,4 +1,4 @@
-Installation Instruction
+#Installation Instruction
 
 Makes a bare clone of the external repository in a local directory
 
@@ -22,6 +22,6 @@ php artisan migrate --seed
 
 Above command will do a migrating and seeding comand. Now serve the app and run locally.
 
-
+Run php artisan storage:link
 
 php artisan serve
